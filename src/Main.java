@@ -94,74 +94,19 @@ public class Main {
         }
 
 
-
+        String[] arr_Romans = {"M", "CM", "D", "CD","C","XC","L","XL","X","IX","V","IV","I"};
+        int[] arr_Arabians = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String result_Roman = "";
         if (checked_num2 == false && checked_num2 == false){
             System.out.print(result);
         }else {
-            switch (result){
-                case 1:
-                    System.out.print("I");
-                    break;
-                case 2:
-                    System.out.print("II");
-                    break;
-                case 3:
-                    System.out.print("III");
-                    break;
-                case 4:
-                    System.out.print("IV");
-                    break;
-                case 5:
-                    System.out.print("V");
-                    break;
-                case 6:
-                    System.out.print("VI");
-                    break;
-                case 7:
-                    System.out.print("VII");
-                    break;
-                case 8:
-                    System.out.print("VIII");
-                    break;
-                case 9:
-                    System.out.print("IX");
-                    break;
-                case 10:
-                    System.out.print("X");
-                    break;
-                case 11:
-                    System.out.print("XI");
-                    break;
-                case 12:
-                    System.out.print("XII");
-                    break;
-                case 13:
-                    System.out.print("XIII");
-                    break;
-                case 14:
-                    System.out.print("XIV");
-                    break;
-                case 15:
-                    System.out.print("XV");
-                    break;
-                case 16:
-                    System.out.print("XVI");
-                    break;
-                case 17:
-                    System.out.print("XVII");
-                    break;
-                case 18:
-                    System.out.print("XVIII");
-                    break;
-                case 19:
-                    System.out.print("XIX");
-                    break;
-                case 20:
-                    System.out.print("XX");
-                    break;
-                default:
-                    throw new RuntimeException("Результат арифметических действий с римскими числами не может быть меньше 0!");
+            for (int i = 0; i<arr_Romans.length; i++){
+                while (result >=arr_Arabians[i]){
+                    result_Roman += arr_Romans[i];
+                    result -= arr_Arabians[i];
+                }
             }
+            System.out.print(result_Roman);
         }
 
     }
